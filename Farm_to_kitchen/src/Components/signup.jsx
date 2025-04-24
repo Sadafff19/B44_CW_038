@@ -101,15 +101,18 @@ const Signup = () => {
                         </div>
 
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">Consumer/Farmer</label>
-                            <input
-                                type="text"
-                                value={role}
-                                onChange={(e) => setRole(e.target.value)}
-                                placeholder="Enter role"
-                                className="input-field w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:border-lime-500 focus:ring-2 focus:ring-lime-200 transition-all"
-                            />
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Role</label>
+                        <select
+                            value={role}
+                            onChange={(e) => setRole(e.target.value)}
+                            className="input-field w-full px-4 py-2 rounded-lg border border-gray-200 bg-white focus:outline-none focus:border-lime-500 focus:ring-2 focus:ring-lime-200 transition-all"
+                        >
+                            <option value="">Select role</option>
+                            <option value="Consumer">Consumer</option>
+                            <option value="Farmer">Farmer</option>
+                        </select>
                         </div>
+
 
                         <button
                             onClick={handleSignup}

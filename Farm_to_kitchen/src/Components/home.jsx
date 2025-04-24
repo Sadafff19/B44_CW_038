@@ -118,9 +118,9 @@ const Home=()=>{
                                 ))}
                             </div>
                             <div className="text-center mt-12">
-                                <button className="bg-white border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md transition duration-300">
+                                <NavLink to='/shop' className="bg-white border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md transition duration-300">
                                     View All Products
-                                </button>
+                                </NavLink>
                             </div>
                         </div>
                     </div>
