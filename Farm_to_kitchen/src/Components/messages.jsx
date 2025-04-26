@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const farmersData = {
-  1: { name: 'Green Acres', specialty: 'Vegetables', img: 'https://via.placeholder.com/100' },
-  2: { name: 'Sunny Farm', specialty: 'Fruits', img: 'https://via.placeholder.com/100' },
-  3: { name: 'Fresh Fields', specialty: 'Dairy', img: 'https://via.placeholder.com/100' },
+  1: { name: 'Green Acres', specialty: 'Vegetables', img: 'https://images.unsplash.com/photo-1723209248478-2b8cf63c48c5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+  2: { name: 'Sunny Farm', specialty: 'Fruits', img: 'https://images.unsplash.com/photo-1635878581681-2927267cd5ca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+  3: { name: 'Fresh Fields', specialty: 'Dairy', img: 'https://images.unsplash.com/photo-1704290591558-dff0d0a54b6c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
 };
 
 const Messages = () => {
