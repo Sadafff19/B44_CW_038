@@ -5,7 +5,6 @@ const AboutUs = () => {
   return (
     <div className="bg-white text-gray-800">
 
-      {/* Hero Section */}
       <section
         className="relative bg-green-100 py-20 text-center text-white h-[400px]"
         style={{
@@ -25,8 +24,6 @@ const AboutUs = () => {
       </div>
     </section>
 
-
-      {/* Mission & Vision */}
       <section className="py-20 px-6 md:px-20 bg-white">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
@@ -44,7 +41,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Team Section */}
       <section className="bg-green-50 py-20 px-6 md:px-20 text-center">
         <h2 className="text-3xl font-bold text-green-700 mb-10">Meet Our Team</h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
@@ -67,7 +63,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
       <section className="py-20 px-6 md:px-20 bg-white">
         <h2 className="text-3xl font-bold text-center text-green-700 mb-10">What People Are Saying</h2>
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -104,7 +99,6 @@ const AboutUs = () => {
 
       <div className="bg-white text-gray-800">
       <header className="bg-green-700 text-white py-6 px-4 text-center">
-        {/* <h1 className="text-3xl font-bold">About FarmFresh</h1> */}
         <p className="mt-2">Connecting local farmers with your kitchen</p>
       </header>
 
@@ -133,7 +127,6 @@ const AboutUs = () => {
       </section>
     </div>
 
-      {/* Footer */}
       <footer className="bg-green-700 text-white py-10 px-6 md:px-20 mt-10">
         <div className="flex flex-col md:flex-row justify-between">
           <div>

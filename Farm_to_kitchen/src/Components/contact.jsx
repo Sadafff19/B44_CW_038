@@ -6,7 +6,6 @@ function Contact() {
   return (
     <div className="bg-farm-light font-sans text-farm-dark"> 
 
-      {/* Hero Section */}
       <section className="relative bg-green-300 text-black">
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="container mx-auto px-6 py-24 relative z-10">
@@ -18,11 +17,10 @@ function Contact() {
         </div>
       </section>
 
-      {/* Contact Info Section */}
       <section className="py-16 bg-gradient-to-b from-white to-green-50">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Phone */}
+
             <div className="contact-card bg-green-200 p-8 rounded-lg text-center hover:shadow-xl transition duration-300">
               <div className="contact-icon bg-farm-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <FontAwesomeIcon icon={faPhoneAlt} className="text-2xl" />
@@ -32,7 +30,6 @@ function Contact() {
               <a href="tel:+18005551234" className="text-farm-green font-bold hover:underline">+1 (800) 555-1234</a>
             </div>
 
-            {/* Email */}
             <div className="contact-card bg-green-200 p-8 rounded-lg text-center hover:shadow-xl transition duration-300">
               <div className="contact-icon bg-farm-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <FontAwesomeIcon icon={faEnvelope} className="text-2xl" />
@@ -42,7 +39,6 @@ function Contact() {
               <a href="mailto:hello@farmtokitchen.com" className="text-farm-green font-bold hover:underline">hello@farmtokitchen.com</a>
             </div>
 
-            {/* Visit */}
             <div className="contact-card bg-green-200 p-8 rounded-lg text-center hover:shadow-xl transition duration-300">
               <div className="contact-icon bg-farm-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <FontAwesomeIcon icon={faMapMarkerAlt} className="text-2xl" />
@@ -55,11 +51,10 @@ function Contact() {
         </div>
       </section>
 
-      {/* Contact Form and Map Section */}
       <section className="py-16 bg-farm-light">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+
             <div id="contact-form">
               <h2 className="font-serif text-3xl font-bold mb-6">Send Us a Message</h2>
               <form className="contact-form space-y-6">
@@ -85,7 +80,6 @@ function Contact() {
               </form>
             </div>
 
-            {/* Map and Hours */}
             <div>
               <div className="mb-8">
                 <h2 className="font-serif text-3xl font-bold mb-6">Our Location</h2>
@@ -119,12 +113,11 @@ function Contact() {
         </div>
       </section>
 
-      {/* FAQ Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6 max-w-4xl">
           <h2 className="font-serif text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
           <div className="space-y-4">
-            {/* FAQ Item */}
+
             <div className="border border-gray-200 rounded-lg overflow-hidden">
               <button className="faq-toggle w-full text-left p-5 bg-green-100 hover:bg-green-200 transition duration-300 flex justify-between items-center">
                 <span className="font-medium">How do I place an order for farm-fresh produce?</span>
@@ -135,7 +128,6 @@ function Contact() {
               </div>
             </div>
 
-            {/* Other FAQ Items */}
           </div>
         </div>
       </section>
@@ -151,7 +143,6 @@ function Contact() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-farm-dark text-black py-8">
         <div className="container mx-auto px-6 text-center">
           <p>&copy; 2025 Farm to Kitchen. All Rights Reserved.</p>

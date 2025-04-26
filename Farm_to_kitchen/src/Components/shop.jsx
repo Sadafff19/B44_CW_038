@@ -75,14 +75,33 @@ const productsData = [
 ];
 
 
+
 const Shop = () => {
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('All');
   const [sort, setSort] = useState('Popular');
+  const [cartCount, setCartCount] = useState(0);
   const navigate = useNavigate();
 
+
+  useEffect(() => {
+    const savedCart = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const totalItems = savedCart.reduce((total, item) => total + item.quantity, 0);
+    setCartCount(totalItems);
+  }, []);
+
   const handleBuyNow = (product) => {
-    navigate('/orders', { state: { product } });
+    navigate('/checkout', {
+      state: {
+        product: {
+          name: product.name,
+          price: product.price,
+          quantity: 1,
+          image: product.image,
+          farm: product.farm,
+        },
+      },
+    });
   };
 
   const handleAddToCart = (product) => {
@@ -92,6 +111,8 @@ const Shop = () => {
           name: product.name,
           price: product.price,
           quantity: 1,
+          image: product.image,
+          farm: product.farm,
         },
       },
     });
@@ -117,6 +138,21 @@ const Shop = () => {
 
   return (
     <div className="bg-gray-50">
+
+      <nav className="bg-green-200 shadow p-4 flex justify-end items-center relative">
+        <div className="relative">
+          <button onClick={() => navigate('/cart')} className="text-gray-700 text-xl relative">
+            <i className="fas fa-shopping-cart"></i>
+            {cartCount > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                {cartCount}
+              </span>
+            )}
+          </button>
+        </div>
+      </nav>
+
+
       <section className="bg-gradient-to-r from-green-600 to-green-800 text-white py-12 text-center">
         <h2 className="text-4xl font-bold mb-4">Fresh From Our Local Farms</h2>
         <p className="text-xl mb-8">100% Organic, Sustainably Grown, Delivered Fresh to Your Kitchen</p>
@@ -137,9 +173,7 @@ const Shop = () => {
             <button
               key={cat}
               onClick={() => setCategory(cat)}
-              className={`px-4 py-2 rounded-full ${
-                category === cat ? 'bg-green-500 text-white' : 'bg-gray-200 hover:bg-green-500 hover:text-white'
-              } transition`}
+              className={`px-4 py-2 rounded-full ${category === cat ? 'bg-green-500 text-white' : 'bg-gray-200 hover:bg-green-500 hover:text-white'} transition`}
             >
               {cat}
             </button>
