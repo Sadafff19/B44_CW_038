@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1) Base resets & typography */
+body {
+  @apply bg-gray-100 text-gray-800 font-sans leading-relaxed;
+}
+
+/* 2) Custom scrollbars (optional) */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+::-webkit-scrollbar-track {
+  @apply bg-gray-200;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded;
+}
