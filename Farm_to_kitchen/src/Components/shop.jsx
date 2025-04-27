@@ -83,7 +83,6 @@ const Shop = () => {
   const [cartCount, setCartCount] = useState(0);
   const navigate = useNavigate();
 
-
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem('cartItems')) || [];
     const totalItems = savedCart.reduce((total, item) => total + item.quantity, 0);
@@ -99,6 +98,10 @@ const Shop = () => {
           quantity: 1,
           image: product.image,
           farm: product.farm,
+          category: product.category,
+          rating: product.rating,
+          organic: product.organic,
+          local: product.local,
         },
       },
     });
@@ -113,8 +116,18 @@ const Shop = () => {
           quantity: 1,
           image: product.image,
           farm: product.farm,
+          category: product.category,
+          rating: product.rating,
+          organic: product.organic,
+          local: product.local,
         },
       },
+    });
+  };
+
+  const handleViewDetails = (product) => {
+    navigate('/productDetails', {
+      state: { product },
     });
   };
 
@@ -151,7 +164,6 @@ const Shop = () => {
           </button>
         </div>
       </nav>
-
 
       <section className="bg-gradient-to-r from-green-600 to-green-800 text-white py-12 text-center">
         <h2 className="text-4xl font-bold mb-4">Fresh From Our Local Farms</h2>
@@ -200,9 +212,19 @@ const Shop = () => {
               key={product.id}
               className="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              <img src={product.image} alt={product.name} className="w-full h-48 object-cover" />
+              <div
+                onClick={() => handleViewDetails(product)}
+                className="cursor-pointer"
+              >
+                <img src={product.image} alt={product.name} className="w-full h-48 object-cover" />
+              </div>
               <div className="p-4">
-                <h3 className="font-semibold text-lg mb-1">{product.name}</h3>
+                <h3
+                  onClick={() => handleViewDetails(product)}
+                  className="font-semibold text-lg mb-1 cursor-pointer hover:underline"
+                >
+                  {product.name}
+                </h3>
                 <p className="text-gray-600 text-sm mb-2">From {product.farm}</p>
                 <div className="flex items-center mb-3">
                   {[...Array(Math.floor(product.rating))].map((_, i) => (

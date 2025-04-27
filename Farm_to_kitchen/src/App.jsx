@@ -17,6 +17,7 @@ import Cart from './Components/cart';
 import Checkout from './Components/checkout';
 import Orders from './Components/orders';
 import Messages from './Components/messages';
+import ProductDetails from './Components/productDetails';
 
 // import UserManagement from './Components/admin/UserManagement';
 // import ProductManagement from './Components/admin/ProductManagement';
@@ -52,6 +53,7 @@ function App() {
           <Route path='/checkout' element={<Checkout/>}/>
           <Route path='/orders' element={<Orders/>}/>
           <Route path='/messages' element={<Messages/>}/>
+          <Route path='/productDetails' element={<ProductDetails/>}/>
 
           {/* Routes with sidebar */}
           <Route
