@@ -1,0 +1,12 @@
+.orBtn{
+    color: rgb(156, 156, 156);
+    text-align: center;
+}
+.google{
+    width: 70%;
+    height: 50px;
+    margin-left: 15%;
+}
+.google:hover{
+    border: 1px solid silver;
+}

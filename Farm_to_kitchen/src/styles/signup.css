@@ -1,0 +1,85 @@
+.formback2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 95vh;
+}
+
+.loginform{
+    padding:15px 60px;
+    height:auto;
+    width:300px;
+    background-color:white;
+    border-radius:5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5%;
+    position: relative;
+}
+.loginform>input{
+    border:1px solid silver;
+    border-radius: 10px ;
+    padding: 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: rgb(231, 231, 255);
+}
+.logoname{
+    font-weight: 700;
+    text-align: center;
+    color: rgb(67, 122, 33);
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.copyright{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 7px 20px;
+    height: 100px;
+    width: 250px;
+}
+.copyright>p{
+    color: rgb(133, 133, 133);
+    font-size: 13px;
+}
+.copyright>p:nth-child(3){
+    margin-left:40px;
+}
+.copyright>p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.signup{
+    padding: 10px 30px;
+    text-align: center;
+    background-color: rgb(61, 122, 0);
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.signup:hover{
+    background-color:rgb(82, 163, 0)
+}
+.register{
+    color: rgb(129, 129, 129);
+    margin-left: auto;
+    font-size: 14px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.okmess {
+    padding: 2px 30px;
+    background-color: rgb(255, 131, 86);
+    position: absolute;
+    z-index: 1000; 
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
